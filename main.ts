@@ -40,7 +40,7 @@ const order2: OrderType = {
 }
 
 const order3: OrderType = {
-    id: 1,
+    id: 3,
     user: user1,
     iva: 22,
     imponibile: 100,
@@ -52,7 +52,11 @@ const orders: OrderType[] = [order1, order2, order3];
 
 function printOrdersForUser(user: UserType, orders: OrderType[]): void {
     const userOrders = orders.filter(order => order.user === user);
-    console.log(userOrders);
+    console.log(user!.username);
+    userOrders.forEach(order => {
+        const { id, iva, imponibile, total, products } = order;
+        console.log({ id, iva, imponibile, total, products });
+    });
 }
 
 printOrdersForUser(user1, orders);
