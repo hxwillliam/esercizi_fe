@@ -50,7 +50,7 @@ const order3: OrderType = {
 
 const orders: OrderType[] = [order1, order2, order3];
 
-function printOrdersForUser(user: UserType, orders: OrderType[]): void {
+function printUserOrder(user: UserType, orders: OrderType[]): void {
     const userOrders = orders.filter(order => order.user === user);
     console.log(user!.username);
     userOrders.forEach(order => {
@@ -59,4 +59,4 @@ function printOrdersForUser(user: UserType, orders: OrderType[]): void {
     });
 }
 
-printOrdersForUser(user1, orders);
+printUserOrder(user1, orders);
