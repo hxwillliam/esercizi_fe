@@ -34,7 +34,7 @@ const order2: OrderType = {
     id: 2,
     user: undefined,
     iva: 22,
-    imponibile: 200,
+    imponibile: 80,
     total: 244,
     products: ['product3', 'product4']
 }
